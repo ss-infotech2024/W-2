@@ -19,8 +19,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Tricolor Header */}
-      <div className="h-1 bg-tricolor"></div>
+
 
       {/* Main Header */}
       <header className="bg-primary text-primary-foreground shadow-md sticky top-0 z-50">

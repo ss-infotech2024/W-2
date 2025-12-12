@@ -16,6 +16,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import GovtOfficials from "./pages/GovtOfficials";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -41,8 +42,11 @@ const App = () => (
           <Route path="/downloads" element={<Services />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+
         </Routes>
+
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );
