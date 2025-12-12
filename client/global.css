@@ -1,0 +1,121 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme - Government Panchayat Style
+   * Primary: Government Blue (#0A3D91)
+   * Accent: Saffron (#FF9933)
+   * tailwind.config.ts expects HSL format
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 40 11% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 40 11% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 40 11% 20%;
+
+    --primary: 215 87% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 33 100% 60%;
+    --secondary-foreground: 40 11% 20%;
+
+    --muted: 215 15% 75%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 33 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 90%;
+    --input: 0 0% 97%;
+    --ring: 215 87% 30%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 215 87% 30%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 33 100% 60%;
+    --sidebar-primary-foreground: 40 11% 20%;
+    --sidebar-accent: 215 87% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 20% 80%;
+    --sidebar-ring: 33 100% 60%;
+  }
+
+  .dark {
+    --background: 215 87% 15%;
+    --foreground: 0 0% 95%;
+
+    --card: 215 87% 20%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 215 87% 20%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 215 87% 30%;
+
+    --secondary: 33 100% 60%;
+    --secondary-foreground: 40 11% 20%;
+
+    --muted: 215 20% 40%;
+    --muted-foreground: 215 15% 70%;
+
+    --accent: 33 100% 60%;
+    --accent-foreground: 40 11% 20%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 30% 25%;
+    --input: 215 30% 20%;
+    --ring: 33 100% 60%;
+    --sidebar-background: 215 87% 20%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 33 100% 60%;
+    --sidebar-primary-foreground: 40 11% 20%;
+    --sidebar-accent: 215 87% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 30% 30%;
+    --sidebar-ring: 33 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Noto Sans Devanagari", "Inter", sans-serif;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  /* Devanagari specific styles */
+  .marathi {
+    font-family: "Noto Sans Devanagari", sans-serif;
+  }
+}
